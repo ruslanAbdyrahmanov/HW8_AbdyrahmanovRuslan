@@ -11,7 +11,7 @@ public class Berserk extends Hero {
     @Override
     public void applySuperPower(Boss boss, Hero[] heroes) {
         blockedDamage = boss.getDamage() / 3;
-        this.setDamage(getDamage() + blockedDamage);
+        boss.setHealth(boss.getHealth()-blockedDamage);
         System.out.println("Berserk reflected part of the damage: " + this.getDamage());
     }
 
